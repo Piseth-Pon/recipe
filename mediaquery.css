@@ -1,0 +1,63 @@
+
+/* Tablet Screen */
+@media only screen and (min-width: 768px) {
+  /* body {
+    background-color: var(--elm-bg);
+  } */
+
+  header .nav {
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+
+  #menuBtn {
+    display: none;
+  }
+
+  .search-bar {
+    width: 750px;
+  }
+
+  footer {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+
+    padding: 25px 50px;
+  }
+
+  footer .bottom-nav {
+    display: grid;
+    justify-items: center;
+
+    text-align: center;
+
+  }
+
+  footer .app {
+    align-self: center;
+  }
+
+
+
+}
+
+
+/* Laptop Screen */
+@media only screen and (min-width: 1200px) {
+  /* body {
+    background-color: darkblue;
+  } */
+  .accordion-container {
+    width: 75%;
+    margin: 15px auto;
+  }
+
+  .modal-overlay {
+    padding: 25px 250px;
+  }
+}

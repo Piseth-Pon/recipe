@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaquery.css">
+  <!-- Icons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <!-- Header: Navbar, Dark&Light, Login -->
+  <header class="flex shadow">
+    <div class="logo">
+      <h4 class="logo-text">home.chef</h4>
+    </div>
+
+    <div class="nav">
+      <a href="#" class="link">About Us</a>
+      <a href="#" class="link">Explore Recipes</a>
+      <a href="#" class="link">Popular Recipes</a>
+    </div>
+
+    <a href="#" class="link" id="menuBtn"><ion-icon name="menu"></ion-icon></a>
+    
+
+  </header>
+  
+
+  <!-- Sidenav -->
+  <section class="sidenav" id="sidenav">
+    <a href="#" class="link">About Us</a>
+    <a href="#" class="link">Explore Recipes</a>
+    <a href="#" class="link">Popular Recipes</a>
+  </section>
+
+
+  <!-- Banner: Slideshow -->
+  <section class="slideshow-container">
+
+    <div class="slide">
+      <h2 class="slide-recipe">DESSERT</h2>
+      <img src="./images/dessert1.jpg" alt="">
+    </div>
+
+    <div class="slide">
+      <h2 class="slide-recipe">BREAKFAST</h2>
+      <img src="./images/breakfast1.jpg" alt="">
+    </div>
+
+    <div class="slide">
+      <h2 class="slide-recipe">LUNCH</h2>
+      <img src="./images/food7.jpg" alt="">
+    </div>
+
+    <div class="slide">
+      <h2 class="slide-recipe">DINNER</h2>
+      <img src="./images/stake.jpg" alt="">
+    </div>
+
+
+    <div class="dots-wrapper">
+      <div class="dot dot-active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+
+
+  </section>
+
+
+  <!-- How it works?: Accordions -->
+  <section id="how-it-works" class="col-1">
+    <h2 class="section-title">How It Works?</h2>
+    
+    <section class="accordion-container">
+      <div class="accordion-item">
+        <div class="accordion-head">
+          <h4>Open your fridge</h4>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+        <div class="accordion-body">
+          <p>Open your fridge what do you have in there... Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae fugiat veritatis excepturi, pariatur corrupti omnis?</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-head">
+          <h4>Choose a recipe</h4>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+        <div class="accordion-body">
+          <p>Come here and search for a recipe ... Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum asperiores deleniti excepturi quasi porro consectetur!</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-head">
+          <h4>Enjoy your wish</h4>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+        <div class="accordion-body">
+          <p>Start cooking ... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio cupiditate perferendis hic. Consequuntur, fuga.</p>
+        </div>
+      </div>
+
+    </section>
+
+
+    <button class="btn">Find Recipes</button>
+  </section>
+
+  <!-- Explore Recipe -->
+  <section id="explore">
+    <div class="overlay">
+      <h2 class="section-title">Explore Recipe</h2>
+      <p class="section-subtitle">Search recipe by pastin the name of the ingredient</p>
+    
+      <form class="search-bar">
+        <ion-icon name="search"></ion-icon>
+        <input type="text" name="recipe" id="recipe" placeholder="What do you have in fridge">
+        <button class="btn">Search</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- Recommended Recipes: Generated Cards -->
+  <section id="recipes">
+    <h2 class="section-title">Popular Recipes</h2>
+    <h3 class="section-subtitle">A large selection of dishes for cooking</h3>
+    
+    <div class="recipes-wrapper">
+
+      <!-- <div class="recipe">
+        <div class="recipe-thumbnail">
+          <img src="./images/food1.jpg" alt="">
+          <a href="#" class="link category">Chinese</a>
+        </div>
+
+        <div class="recipe-detail">
+          <div class="rating">
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+          </div>
+          <h4 class="recipe-name">Pumpkin Soup</h4>
+          <button class="btn" id="detailBtn">Show Detail</button>
+
+        </div>
+      </div> -->
+
+
+
+    </div>
+  
+  
+  </section>
+
+
+  <!-- Detail Modal -->
+  <div class="modal-wrapper hide">
+    <!-- <div class="modal-container">
+      <div class="modal-overlay">
+        <div class="modal-head">
+          <h4>Recipe Name</h4>
+
+          <a href="#" class="link" id="closeBtn">
+            <ion-icon name="close-circle"></ion-icon>
+          </a>
+        </div>
+
+        <div class="modal-body">
+          <div class="tabbar">
+            <button class="btn tabbtn btn-active" data-tabid="description">Description</button>
+            <button class="btn tabbtn" data-tabid="ingredient">Ingredients</button>
+            <button class="btn tabbtn" data-tabid="direction">Directions</button>
+          </div>
+
+          <div class="tabbar-body">
+            <section class="tab tab-active" id="description">
+              <h3>Description</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum voluptate optio voluptatum numquam facilis eum autem eveniet expedita obcaecati perspiciatis officiis, ducimus, doloribus modi quod hic esse soluta. In.</p>
+            </section>
+
+            <section class="tab" id="ingredient">
+              <h3>Ingredients</h3>
+              <ul>
+                <li>500g desiccated coconut</li>
+                <li>200g plain flour</li>
+                <li>1 egg, beaten</li>
+                <li>50ml vegetable oil</li>
+                <li>70g mayonnaise</li>
+                <li>30g sweet chilli sauce</li>
+              </ul>
+            </section>
+
+
+            <section class="tab" id="direction">
+              <h3>Directions</h3>
+              <div class="step">
+                <h4>Step 1</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, sunt!</p>
+              </div>
+              <div class="step">
+                <h4>Step 2</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, sunt!</p>
+              </div>
+              <div class="step">
+                <h4>Step 3</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, sunt!</p>
+              </div>
+            </section>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="logo">
+      <h4 class="logo-text">home.chef</h4>
+    </div>
+
+    <div class="bottom-nav col-1">
+      <a href="#" class="link">Explore Recipes</a>
+      <a href="#" class="link">About</a>
+      <a href="#" class="link">Contact</a>
+      <a href="#" class="link">Conditions</a>
+    </div>
+
+    <div class="app">
+      <div class="download">
+        <ion-icon name="logo-apple-appstore"></ion-icon>
+        <p>Download on the</p>
+        <h4>App Store</h4>
+      </div>
+
+      <div class="download">
+        <ion-icon name="logo-google-playstore"></ion-icon>
+        <p>Download on the</p>
+        <h4>Play Store</h4>
+      </div>
+    </div>
+
+
+  </footer>
+
+
+  <!-- Scripts -->
+  <script type="module" src="./script.js"></script>
+  
+</body>
+</html>
